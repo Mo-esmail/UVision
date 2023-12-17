@@ -1,0 +1,33 @@
+@model List<UVISION.Models.Report>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="row d-flex justify-content-center">
+    <div class="col-md-6 col-xl-8">
+        <div class="card-body text-center d-flex flex-column align-items-center">
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Device ID</th>
+                        <th scope="col">TimeStamp</th>
+                        <th scope="col">Locationt</th>
+                        <th scope="col">Number Of Cars</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <th scope="row">@item.DeviceID</th>
+                        <td>@item.Timestamp</td>
+                        <td>@item.location</td>
+                        <td>@item.No_Of_Cars</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

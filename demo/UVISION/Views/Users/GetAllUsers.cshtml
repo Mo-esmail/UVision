@@ -1,0 +1,20 @@
+@model List<UVISION.Models.MyUserViewModel>
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="row d-flex justify-content-center">
+    <div class="col-md-6 col-xl-4">
+        <div class="card-body text-center d-flex flex-column align-items-center">
+            <h3>All Registered Users</h3>
+            <hr/>
+            @foreach (var item in Model)
+            {
+                <div>
+                    @item.userName
+                    <hr/>
+                </div>
+            }
+        </div>
+    </div>
+</div>

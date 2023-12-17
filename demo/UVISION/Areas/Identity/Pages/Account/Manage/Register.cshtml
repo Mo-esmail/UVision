@@ -1,0 +1,36 @@
+﻿@page
+@model RegisterModel
+@* @{ *@
+@*     ViewData["Title"] = "Register"; *@
+@* } *@
+@* *@
+@* <h1 style="text-align: center">@ViewData["Title"]</h1> *@
+<partial name="_StatusMessage" for="StatusMessage" />
+<div class="row d-flex justify-content-center">
+    <div class="col-md-6 col-xl-4">
+        <div class="card-body text-center d-flex flex-column align-items-center">
+            <form id="registerForm"  method="post">
+                <h2>Add a new User</h2>
+                <hr />
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="mb-3">
+                    <input asp-for="Input.Email" class="form-control" placeholder="username" aria-required="true" />
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <input asp-for="Input.Password" class="form-control" placeholder="Password" aria-required="true" />
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <input asp-for="Input.ConfirmPassword" class="form-control" placeholder="Confirm Password" aria-required="true" />
+                    <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                </div>
+                <button id="registerSubmit" type="submit" class="btn btn-primary shadow d-block w-100">Add New User</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
